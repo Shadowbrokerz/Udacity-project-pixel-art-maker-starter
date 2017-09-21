@@ -9,9 +9,9 @@ $(document).ready(function() {
     function makeGrid(height, width) {
         let column = 1;
         while (column <= height) {
-            $('#pixel_canvas').append('<tr class="column' + column + '">');
+            $('#pixel_canvas').append(`<tr class="column${column}">`);
             for (let row = 1; row <= width; row++) {
-                $('.column' + column + '').append('<td class="row c' + column + 'r' + row + '">');
+                $(`.column${column}`).append(`<td class="row c${column}r${row}">`);
             }
             column++;
         }
